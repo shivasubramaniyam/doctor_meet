@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import React from "react";
 import { ModeToggle } from "./theme-toggle";
@@ -15,8 +13,11 @@ import { Button } from "./ui/button";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 w-full border-b bg-background/80 backdrop-blur-md z-10 supports-[backdrop-filter:bg-background/60">
-      <nav className="container mx-auto px-4 height-16 flex items-center justify-between ">
+    <header
+      className="sticky top-0 z-10 w-full border-b bg-background/80 backdrop-blur-md supports-backdrop-filter:bg-background/60 py-5
+    "
+    >
+      <nav className="container mx-auto flex items-center justify-between">
         <Link href="/">
           <Image
             src="/logo.svg"
@@ -24,6 +25,7 @@ const Header = () => {
             width={200}
             height={60}
             className="h-10 w-auto object-contain"
+            loading="eager"
           />
         </Link>
         <div className="flex items-center space-x-2">
@@ -32,7 +34,11 @@ const Header = () => {
               <Button variant="secondary">Sign In</Button>
             </SignInButton>
             <SignUpButton>
-              <Button className="bg-[#6c47ff]" variant="secondary">
+              <Button
+                className="bg-[#00d492]
+"
+                variant="secondary"
+              >
                 Sign Up
               </Button>
             </SignUpButton>
